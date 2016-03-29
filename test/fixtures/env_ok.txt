@@ -1,0 +1,9 @@
+export SECRET_KEY_BASE=""
+export DATABASE_USERNAME=""
+export DATABASE_PASSWORD="pass"
+export DATABASE_NAME="db_name"
+export DATABASE_SERVER="db-host.example.com"
+export API_SIGN_SECRET="XXX"
+
+## comment
+# export export API_SIGN_SECRET="YYY"
