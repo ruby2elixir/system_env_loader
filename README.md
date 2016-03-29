@@ -1,6 +1,6 @@
 # SystemEnvLoader
 
-A little package to load files like
+A little package to load (bashlike) files with exported ENV variables into Elixir runtime.
 
 ```bash
 export SECRET_KEY_BASE=""

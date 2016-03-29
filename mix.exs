@@ -6,13 +6,11 @@ defmodule SystemEnvLoader.Mixfile do
   def project do
     [app: :system_env_loader,
      version: @version,
-     build_path: "../../_build",
-     config_path: "../../config/config.exs",
-     deps_path: "../../deps",
-     lockfile: "../../mix.lock",
-     elixir: "~> 1.2",
+     elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     package: package,
+     docs: [extras: ["README.md"]],
      deps: deps]
   end
 
@@ -38,5 +36,18 @@ defmodule SystemEnvLoader.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+
+  defp package do
+    [
+     maintainers: ["Roman Heinrich"],
+     licenses: ["MIT License"],
+     description: "A little package to load (bashlike) files with exported ENV variables into Elixir runtime",
+     links: %{
+       github: "https://github.com/ruby2elixir/system_env_loader",
+       docs: "http://hexdocs.pm/system_env_loader/#{@version}/"
+     }
+    ]
   end
 end
